@@ -1,15 +1,15 @@
-#STEP 1 - merge training and test subjects
+#merge training and test subjects
 subject_test <-read.table("./UCI HAR Dataset/test/subject_test.txt", header=FALSE)
 subject_train <-read.table("./UCI HAR Dataset/train/subject_train.txt", header=FALSE)
 subject_all <- rbind(subject_test, subject_train) # append/merge subject train and test data
 
 
-#STEP 1 - merge training and test data sets
+#merge training and test data sets
 x_test <- read.table("./UCI HAR Dataset/test/X_test.txt", header=FALSE)
 x_train <- read.table("./UCI HAR Dataset/train/X_train.txt", header=FALSE)
 x_all <- rbind(x_test, x_train)
 
-#STEP 3 - merge label IDs of training and test sets
+#merge label IDs of training and test sets
 y_test <-read.table("./UCI HAR Dataset/test/y_test.txt", header=FALSE)
 y_train <-read.table("./UCI HAR Dataset/train/y_train.txt", header=FALSE)
 y_all <- rbind(y_test, y_train) # append/merge label train and test data
